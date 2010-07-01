@@ -11,5 +11,4 @@ if has("gui_running")
   set guioptions-=T
 endif
 
-
 autocmd FileType make setlocal noexpandtab
