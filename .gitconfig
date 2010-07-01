@@ -1,0 +1,5 @@
+[user]
+	name = Scott McLeod
+	email = halcyonblue@gmail.com
+[core]
+	editor = gvim -f
