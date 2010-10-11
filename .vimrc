@@ -6,6 +6,8 @@ if has("gui_running")
   colorscheme darkblue
   set guioptions-=T
   set gfn=Monaco\ 12
+  set number
+  highlight linenr guifg=white guibg=darkblue
 endif
 
 set shiftwidth=2
