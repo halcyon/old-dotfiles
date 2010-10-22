@@ -1,1 +1,1 @@
-/usr/bin/synergys -a 192.168.1.92 --restart --daemon -c $HOME/dotconfig/synergys.conf
+/usr/bin/synergys -a $1 --restart --daemon -c $HOME/dotconfig/$2
