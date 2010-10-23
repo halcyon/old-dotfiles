@@ -1,0 +1,22 @@
+StrictHostKeyChecking no
+GSSAPIAuthentication no
+ExitOnForwardFailure yes
+
+Host mob
+  Hostname localhost
+  User root
+  Port 2222
+
+Host phone
+  Hostname localhost
+  User root
+  ProxyCommand connect-proxy -R remote -5 -S localhost:8888 %h %p
+
+#Host *.homeunix.net
+#  ProxyCommand connect-proxy -R remote -5 -S localhost:8888 %h %p
+
+#Host csprofessional.net
+#  ProxyCommand connect-proxy -R remote -5 -S localhost:8888 %h %p
+
+#Host github.com
+#  ProxyCommand connect-proxy -R remote -5 -S localhost:8888 %h %p
