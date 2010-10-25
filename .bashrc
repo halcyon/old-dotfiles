@@ -98,6 +98,15 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+remote(){
+  rdesktop -z -a 16 -g 1680x1050 $1 &
+  exit
+}
+
+alias rdp='remote'
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
 . ~/dotconfig/gitprompt.sh
+
+export PATH=$HOME/dotconfig:$PATH
