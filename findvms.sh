@@ -12,7 +12,7 @@ done
 
 for VM in $VMS
 do
-  MACHINE=`echo $VM |ruby -e 'puts ARGF.readline[/"([A-z]+)"/, 1]'`
+  MACHINE=`echo $VM |ruby -e 'puts ARGF.readline[/"(([A-z]|[0-9])+)"/, 1]'`
   MAC=`VBoxManage showvminfo "$MACHINE"| grep MAC: |ruby -e 'puts ARGF.readline[/MAC: (([0-9]|[A-Z])+)/, 1].downcase.scan(/(..)/).join(":")'`
   arp -vn | grep $MAC
 done
