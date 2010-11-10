@@ -110,3 +110,5 @@ alias rdp='remote'
 . ~/dotconfig/gitprompt.sh
 
 export PATH=$HOME/dotconfig:$PATH
+
+set -o vi
