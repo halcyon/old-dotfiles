@@ -112,3 +112,5 @@ alias rdp='remote'
 #export M2_HOME="$HOME/apache-maven-3.0"
 export JAVA_HOME="/usr/lib/jvm/java-6-openjdk"
 export PATH="$HOME/dotconfig:$M2_HOME/bin:$PATH:/usr/5bin"
+
+set -o vi
