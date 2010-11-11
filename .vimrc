@@ -20,3 +20,4 @@ autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
 autocmd FileType make setlocal noexpandtab
+autocmd BufEnter *.patch setlocal noexpandtab
