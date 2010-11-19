@@ -82,6 +82,10 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -109,7 +113,7 @@ alias rdp='remote'
 
 . ~/dotconfig/gitprompt.sh
 
-#export M2_HOME="$HOME/apache-maven-3.0"
+export M2_HOME="$HOME/apache-maven-3.0"
 export JAVA_HOME="/usr/lib/jvm/java-6-openjdk"
 export PATH="$HOME/dotconfig:$M2_HOME/bin:$PATH:/usr/5bin"
 
