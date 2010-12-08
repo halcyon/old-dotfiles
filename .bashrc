@@ -103,7 +103,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 remote(){
-  rdesktop -z -a 16 -g 1680x1050 $1 &
+  rdesktop -D -z -a 16 -g 1680x1050 $1 &
   exit
 }
 
