@@ -20,6 +20,9 @@ set expandtab
 "autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 let mapleader = "\\"
 map <Leader>n :NERDTreeToggle<CR>
+map <leader>F :FufFile<CR>
+map <leader>f :FufTaggedFile<CR>
+map <leader>s :FufTag<CR>
 
 autocmd FileType make setlocal noexpandtab
 autocmd BufEnter *.patch setlocal noexpandtab
