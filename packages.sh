@@ -27,6 +27,6 @@ apt-get -y install git git-svn
 apt-get -y install chromium-browser flashplugin64-installer vim-gtk ctags ack-grep pidgin calibre
 ln -s /usr/bin/ack-grep /usr/bin/ack
 apt-get -y install openssh-server
-apt-get -y install build-essential libreadline-dev libssl-dev dput
+apt-get -y install build-essential libreadline-dev libssl-dev curl dput
 apt-get -y install lxc libvirt-bin
 apt-get -y install synergy
