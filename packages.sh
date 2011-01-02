@@ -8,6 +8,8 @@ apt-add-list() {
   fi
 }
 
+apt-get -y install aptitude
+
 apt-add-repository ppa:chromium-daily/stable
 apt-add-repository ppa:sevenmachines/flash
 apt-add-repository ppa:git-core/ppa
