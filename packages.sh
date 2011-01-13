@@ -8,6 +8,16 @@ apt-add-list() {
   fi
 }
 
+add-cgroup() {
+  grep cgroup /etc/fstab > /dev/null
+  if [ $? -ne 0 ]
+  then
+    echo -e "none\t/cgroup\tcgroup\tdefaults\t0\t0" >> /etc/fstab
+  fi
+  mkdir -p /cgroup
+  mount /cgroup
+}
+
 apt-get -y install aptitude
 
 apt-add-repository ppa:chromium-daily/stable
@@ -30,5 +40,8 @@ aptitude -y install chromium-browser flashplugin64-installer vim-gtk ctags ack-g
 ln -s /usr/bin/ack-grep /usr/bin/ack
 aptitude -y install openssh-server
 aptitude -y install build-essential libreadline-dev libssl-dev curl mysql-server libmysqlclient-dev dput
+
+add-cgroup
 aptitude -y install lxc libvirt-bin
+
 aptitude -y install synergy
