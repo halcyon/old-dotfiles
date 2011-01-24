@@ -14,6 +14,9 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 "autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 "autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 "autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
@@ -26,3 +29,5 @@ map <leader>s :FufTag<CR>
 
 autocmd FileType make setlocal noexpandtab
 autocmd BufEnter *.patch setlocal noexpandtab
+
+runtime macros/matchit.vim
