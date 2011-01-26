@@ -62,6 +62,9 @@
 :NERDTreeFromBookmark	NERD_tree.txt	/*:NERDTreeFromBookmark*
 :NERDTreeMirror	NERD_tree.txt	/*:NERDTreeMirror*
 :NERDTreeToggle	NERD_tree.txt	/*:NERDTreeToggle*
+:TextobjRubyblockDefaultKeyMappings	textobj-rubyblock.txt	/*:TextobjRubyblockDefaultKeyMappings*
+<Plug>(textobj-rubyblock-a)	textobj-rubyblock.txt	/*<Plug>(textobj-rubyblock-a)*
+<Plug>(textobj-rubyblock-i)	textobj-rubyblock.txt	/*<Plug>(textobj-rubyblock-i)*
 NERDTree	NERD_tree.txt	/*NERDTree*
 NERDTree-?	NERD_tree.txt	/*NERDTree-?*
 NERDTree-A	NERD_tree.txt	/*NERDTree-A*
@@ -280,6 +283,7 @@ g:rails_statusline	rails.txt	/*g:rails_statusline*
 g:rails_syntax	rails.txt	/*g:rails_syntax*
 g:rails_tabstop	rails.txt	/*g:rails_tabstop*
 g:rails_url	rails.txt	/*g:rails_url*
+g:textobj_rubyblock_no_default_key_mappings	textobj-rubyblock.txt	/*g:textobj_rubyblock_no_default_key_mappings*
 l9	l9.txt	/*l9*
 l9-about	l9.txt	/*l9-about*
 l9-author	l9.txt	/*l9-author*
@@ -428,3 +432,12 @@ rails-template-types	rails.txt	/*rails-template-types*
 rails-type-navigation	rails.txt	/*rails-type-navigation*
 rails-vim-integration	rails.txt	/*rails-vim-integration*
 rails.txt	rails.txt	/*rails.txt*
+textobj-rubyblock	textobj-rubyblock.txt	/*textobj-rubyblock*
+textobj-rubyblock-bugs	textobj-rubyblock.txt	/*textobj-rubyblock-bugs*
+textobj-rubyblock-changelog	textobj-rubyblock.txt	/*textobj-rubyblock-changelog*
+textobj-rubyblock-contents	textobj-rubyblock.txt	/*textobj-rubyblock-contents*
+textobj-rubyblock-customizing	textobj-rubyblock.txt	/*textobj-rubyblock-customizing*
+textobj-rubyblock-interface	textobj-rubyblock.txt	/*textobj-rubyblock-interface*
+textobj-rubyblock-introduction	textobj-rubyblock.txt	/*textobj-rubyblock-introduction*
+textobj-rubyblock-mappings	textobj-rubyblock.txt	/*textobj-rubyblock-mappings*
+textobj-rubyblock.txt	textobj-rubyblock.txt	/*textobj-rubyblock.txt*

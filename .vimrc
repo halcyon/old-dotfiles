@@ -31,3 +31,4 @@ autocmd FileType make setlocal noexpandtab
 autocmd BufEnter *.patch setlocal noexpandtab
 
 runtime macros/matchit.vim
+filetype plugin indent on
