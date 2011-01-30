@@ -1,5 +1,3 @@
-:Ack	ack.txt	/*:Ack*
-:AckAdd	ack.txt	/*:AckAdd*
 :FufBookmarkDir	fuf.txt	/*:FufBookmarkDir*
 :FufBookmarkDirAdd	fuf.txt	/*:FufBookmarkDirAdd*
 :FufBookmarkFile	fuf.txt	/*:FufBookmarkFile*
@@ -34,12 +32,7 @@
 :FufTag	fuf.txt	/*:FufTag*
 :FufTagWithCursorWord	fuf.txt	/*:FufTagWithCursorWord*
 :FufTaggedFile	fuf.txt	/*:FufTaggedFile*
-:LAck	ack.txt	/*:LAck*
-:LAckAdd	ack.txt	/*:LAckAdd*
 abc	fuf.txt	/*abc*
-ack	ack.txt	/*ack*
-ack-author	ack.txt	/*ack-author*
-ack.txt	ack.txt	/*ack.txt*
 config/rails.vim	rails.txt	/*config\/rails.vim*
 fuf	fuf.txt	/*fuf*
 fuf#setOneTimeVariables()	fuf.txt	/*fuf#setOneTimeVariables()*
