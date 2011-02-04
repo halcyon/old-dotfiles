@@ -14,6 +14,7 @@ set shiftwidth=2
 set tabstop=2
 set expandtab
 set cursorline
+syntax on
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
