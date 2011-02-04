@@ -15,6 +15,10 @@ set tabstop=2
 set expandtab
 set cursorline
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+
 "Necessary for vim-textobj-rubyblock
 runtime macros/matchit.vim
 filetype plugin indent on

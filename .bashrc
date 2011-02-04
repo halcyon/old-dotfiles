@@ -111,8 +111,8 @@ alias rdp='remote'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
-. ~/dotfiles/bash_completion.d/gitprompt.sh
-. ~/dotfiles/bash_completion.d/git-flow-comlpetion.sh
+. ~/dotfiles/bash_completion.d/gitprompt/gitprompt.sh
+. ~/dotfiles/bash_completion.d/git-flow-completion/git-flow-completion.bash
 
 #export M2_HOME="$HOME/apache-maven-3.0"
 export JAVA_HOME="/usr/lib/jvm/java-6-openjdk"
