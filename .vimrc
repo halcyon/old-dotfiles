@@ -25,7 +25,7 @@ endif
 set hidden
 
 
-set nowrap        " don't wrap lines
+"set nowrap        " don't wrap lines
 set tabstop=2     " a tab is four spaces
 set backspace=indent,eol,start
                   " allow backspacing over everything in insert mode
@@ -55,6 +55,8 @@ set noswapfile
 
 set expandtab
 set cursorline
+
+set pastetoggle=<F2>
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
