@@ -100,6 +100,8 @@ map <leader>F :FufFile<CR>
 map <leader>f :FufTaggedFile<CR>
 map <leader>s :FufTag<CR>
 
+let g:CommandTMaxFiles=20000
+
 " Show whitespaces
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.

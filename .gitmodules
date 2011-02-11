@@ -31,6 +31,6 @@
 [submodule ".vim/bundle/vim-togglemouse"]
 	path = .vim/bundle/vim-togglemouse
 	url = git://github.com/nvie/vim-togglemouse.git
-[submodule ".vim/bundle/Command-T"]
-	path = .vim/bundle/Command-T
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
 	url = git://github.com/wincent/Command-T.git
