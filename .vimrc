@@ -76,14 +76,6 @@ map <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
-" Show whitespaces
-set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
-
-" Disable whitespace display of tabs in html and xml
-"if has('autocmd')
-"  autocmd filetype html,xml set listchars-=tab:>.
-"end
 
 nmap <silent> ,/ :nohlsearch<CR>
 
@@ -102,6 +94,14 @@ map <leader>F :FufFile<CR>
 map <leader>f :FufTaggedFile<CR>
 map <leader>s :FufTag<CR>
 
+" Show whitespaces
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" Disable whitespace display of tabs in html and xml
+if has('autocmd')
+  autocmd filetype html,xml set listchars-=tab:>.
+end
 
 if has('autocmd')
   "Disable expandtab on make and patch files
