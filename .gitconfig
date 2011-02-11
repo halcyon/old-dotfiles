@@ -2,4 +2,8 @@
 	name = Scott McLeod
 	email = halcyonblue@gmail.com
 [core]
-	editor = gvim -f
+	editor = vim -f
+	autocrlf = input
+	safecrlf = true
+[merge]
+	tool = kdiff3
