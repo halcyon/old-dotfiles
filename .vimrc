@@ -39,6 +39,7 @@ set smartcase     " ignore case if search pattern is all lowercase,
                   "    case-sensitive otherwise
 set smarttab      " insert tabs on the start of a line according to
                   "    shiftwidth, not tabstop
+set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 
 
@@ -62,7 +63,7 @@ nnoremap ; :
 
 
 " Use Q for formatting the current paragraph (or selection)
-vmap Q gq         
+vmap Q gq
 nmap Q gqap
 
 " Force your newbie friends to stop using the arrow keys
@@ -74,6 +75,17 @@ map <right> <nop>
 " Makes the down key no longer jump over wrapped lines
 nnoremap j gj
 nnoremap k gk
+
+" Show whitespaces
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
+" Disable whitespace display of tabs in html and xml
+"if has('autocmd')
+"  autocmd filetype html,xml set listchars-=tab:>.
+"end
+
+nmap <silent> ,/ :nohlsearch<CR>
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
