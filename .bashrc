@@ -119,3 +119,4 @@ export JAVA_HOME="/usr/lib/jvm/java-6-openjdk"
 export PATH="$HOME/dotfiles:$M2_HOME/bin:$PATH:/usr/5bin"
 
 set -o vi
+export TERM=xterm-256color
