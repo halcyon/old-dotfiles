@@ -71,6 +71,10 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" Makes the down key no longer jump over wrapped lines
+nnoremap j gj
+nnoremap k gk
+
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
