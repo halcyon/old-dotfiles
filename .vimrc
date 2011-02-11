@@ -57,7 +57,19 @@ set cursorline
 
 set pastetoggle=<F2>
 
+" save keystrokes by removing need to press shift to produce : in command mode
 nnoremap ; :
+
+
+" Use Q for formatting the current paragraph (or selection)
+vmap Q gq         
+nmap Q gqap
+
+" Force your newbie friends to stop using the arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
