@@ -6,7 +6,6 @@ if $DISPLAY != ""
   gui
 endif
 
-
 if &t_Co > 2 || has("gui_running")
   syntax on        " switch syntax highlighting on, when the terminal has colorsfsafsfasfd
 endif
@@ -57,6 +56,8 @@ set expandtab
 set cursorline
 
 set pastetoggle=<F2>
+
+nnoremap ; :
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
