@@ -78,7 +78,11 @@ nnoremap k gk
 
 nmap <silent> ,/ :nohlsearch<CR>
 
+" Give vim control of mouse - use F12 to toggle control to terminal
 set mouse=a
+
+" Run sudo
+cmap w!! w !sudo tee % >/dev/null
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
