@@ -106,7 +106,7 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 " Disable whitespace display of tabs in html and xml
 if has('autocmd')
-  autocmd filetype html,xml set listchars-=tab:>.
+  autocmd FileType html,xml set listchars-=tab:>.
 end
 
 if has('autocmd')

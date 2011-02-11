@@ -19,6 +19,7 @@ add-cgroup() {
 }
 
 apt-get -y install aptitude
+apt-get -y install python-software-properties ppa-purge
 
 apt-add-repository ppa:chromium-daily/stable
 apt-add-repository ppa:sevenmachines/flash
