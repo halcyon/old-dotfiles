@@ -28,3 +28,6 @@
 [submodule ".vim/bundle/vim-mustang"]
 	path = .vim/bundle/vim-mustang
 	url = git://github.com/cschlueter/vim-mustang.git
+[submodule ".vim/bundle/vim-togglemouse"]
+	path = vim-togglemouse
+	url = git://github.com/nvie/vim-togglemouse.git
