@@ -93,7 +93,8 @@ filetype plugin indent on
 
 
 "Necessary for nerdtree and vim-fuzzyfinder
-let mapleader = "\\"
+"let mapleader = "\\"
+let mapleader = ","
 map <Leader>n :NERDTreeToggle<CR>
 map <leader>F :FufFile<CR>
 map <leader>f :FufTaggedFile<CR>
