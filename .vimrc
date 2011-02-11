@@ -7,7 +7,7 @@ if $DISPLAY != ""
 endif
 
 if &t_Co > 2 || has("gui_running")
-  syntax on        " switch syntax highlighting on, when the terminal has colorsfsafsfasfd
+  syntax on        " switch syntax highlighting on, when the terminal has colors
 endif
 
 if &t_Co >= 256 || has("gui_running")
