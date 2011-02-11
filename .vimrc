@@ -2,26 +2,23 @@
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-"if $DISPLAY != ""
-"  gui
-"endif
-
-"if has("gui_running")
-"  set guioptions-=T " disable GUI toolbar
-"  set gfn=Monaco\ 12
-"endif
-
-if &t_Co >= 256 || has("gui_running")
-   colorscheme mustang
-"  colorscheme darkblue
-"  highlight linenr guifg=white guibg=darkblue
+if $DISPLAY != ""
+  gui
 endif
 
+
 if &t_Co > 2 || has("gui_running")
-   " switch syntax highlighting on, when the terminal has colors
-  syntax on
-  set gfn=Monaco\ 12
+  syntax on        " switch syntax highlighting on, when the terminal has colorsfsafsfasfd
+endif
+
+if &t_Co >= 256 || has("gui_running")
+  colorscheme mustang
+  highlight linenr guibg=black "set numberbar colors
   set guioptions-=T " disable GUI toolbar
+  set gfn=Monaco\ 12
+
+  "colorscheme darkblue
+  "highlight linenr guifg=white guibg=darkblue "set numberbar
 endif
 
 
@@ -50,7 +47,7 @@ set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                " change the terminal's title
-set visualbell           " don't beep
+"set visualbell           " don't beep
 set noerrorbells         " don't beep
 
 set nobackup
@@ -58,8 +55,6 @@ set noswapfile
 
 set expandtab
 set cursorline
-
-syntax on
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
