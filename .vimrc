@@ -100,7 +100,10 @@ map <leader>F :FufFile<CR>
 map <leader>f :FufTaggedFile<CR>
 map <leader>s :FufTag<CR>
 
+"Max Files command-t can list
 let g:CommandTMaxFiles=20000
+
+nmap <silent> <Leader>b :LustyJuggler<CR>
 
 " Show whitespaces
 set list
