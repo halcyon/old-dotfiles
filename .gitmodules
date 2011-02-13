@@ -40,3 +40,6 @@
 [submodule ".vim/bundle/lusty"]
 	path = .vim/bundle/lusty
 	url = git://github.com/sjbach/lusty.git
+[submodule ".vim/bundle/tabular"]
+	path = .vim/bundle/tabular
+	url = git://github.com/godlygeek/tabular.git
