@@ -103,7 +103,11 @@ map <leader>s :FufTag<CR>
 "Max Files command-t can list
 let g:CommandTMaxFiles=20000
 
+" Activate LustyJuggler
 nmap <silent> <Leader>b :LustyJuggler<CR>
+
+" Toggle spelling
+nmap <leader>s :setlocal spell! spelllang=en_us<CR>
 
 " Show whitespaces
 set list
