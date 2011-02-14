@@ -126,12 +126,13 @@ endfunction
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
-" Disable whitespace display of tabs in html and xml
 if has('autocmd')
-  autocmd FileType html,xml set listchars-=tab:>.
-end
+  " Enter directory of file opened in buffer
+  autocmd BufEnter * lcd %:p:h
 
-if has('autocmd')
+  " Disable whitespace display of tabs in html and xml
+  autocmd FileType html,xml set listchars-=tab:>.
+
   "Disable expandtab on make and patch files
   autocmd FileType make setlocal noexpandtab
   autocmd BufEnter *.patch setlocal noexpandtab
