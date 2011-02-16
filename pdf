@@ -1,0 +1,8 @@
+#!/bin/bash
+
+document=${1%%.asciidoc}
+
+echo $document
+asciidoc $document.asciidoc
+wkhtmltopdf-amd64 $document.html $document.pdf
+rm $document.html
