@@ -128,7 +128,8 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 if has('autocmd')
   " Enter directory of file opened in buffer
-  autocmd BufEnter * lcd %:p:h
+  " disabled because it causes issues with vim-fugitive
+  " autocmd BufEnter * lcd %:p:h
 
   " Disable whitespace display of tabs in html and xml
   autocmd FileType html,xml set listchars-=tab:>.
