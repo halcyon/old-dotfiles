@@ -94,11 +94,18 @@ filetype plugin indent on
 
 "Necessary for nerdtree and vim-fuzzyfinder
 "let mapleader = "\\"
+"map <Leader>n :NERDTreeToggle<CR>
+"map <leader>F :FufFile<CR>
+"map <leader>f :FufTaggedFile<CR>
+"map <leader>s :FufTag<CR>
+
 let mapleader = ","
-map <Leader>n :NERDTreeToggle<CR>
-map <leader>F :FufFile<CR>
-map <leader>f :FufTaggedFile<CR>
-map <leader>s :FufTag<CR>
+"rebind my favorite commands from Git.vim for Fugitive
+nmap <leader>gs :Gstatus<cr>
+nmap <leader>gc :Gcommit<cr>
+nmap <leader>ga :Gwrite<cr>
+nmap <leader>gl :Glog<cr>
+nmap <leader>gd :Gdiff<cr>
 
 "Max Files command-t can list
 let g:CommandTMaxFiles=20000
