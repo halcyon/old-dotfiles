@@ -48,3 +48,5 @@ add-cgroup
 aptitude -y install lxc libvirt-bin
 
 aptitude -y install synergy
+
+aptitude -y install gtk-recordMyDesktop
