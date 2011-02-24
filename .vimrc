@@ -131,6 +131,9 @@ function! s:align()
   endif
 endfunction
 
+" Gundo toggle
+nnoremap <F5> :GundoToggle<CR>
+
 " Show whitespaces
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
