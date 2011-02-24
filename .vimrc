@@ -106,6 +106,8 @@ nmap <leader>gc :Gcommit<cr>
 nmap <leader>ga :Gwrite<cr>
 nmap <leader>gl :Glog<cr>
 nmap <leader>gd :Gdiff<cr>
+nmap <leader>gp :Git push<cr>
+nmap <leader>gu :Git pull<cr>
 
 "Max Files command-t can list
 let g:CommandTMaxFiles=20000
