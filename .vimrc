@@ -63,6 +63,7 @@ nnoremap ; :
 
 
 " Use Q for formatting the current paragraph (or selection)
+set textwidth=77
 vmap Q gq
 nmap Q gqap
 
@@ -85,7 +86,8 @@ set mouse=a
 cmap w!! w !sudo tee % >/dev/null
 
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"match OverLength /\%81v.\+/
+match OverLength /\%78v.\+/
 
 "Necessary for vim-textobj-rubyblock
 runtime macros/matchit.vim
