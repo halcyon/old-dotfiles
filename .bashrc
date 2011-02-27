@@ -108,6 +108,7 @@ remote(){
 }
 
 alias rdp='remote'
+alias encode=`time encode.sh`
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
@@ -116,7 +117,7 @@ alias rdp='remote'
 
 #export M2_HOME="$HOME/apache-maven-3.0"
 export JAVA_HOME="/usr/lib/jvm/java-6-openjdk"
-export PATH="$HOME/dotfiles:$M2_HOME/bin:$PATH:/usr/5bin"
+export PATH="$HOME/dotfiles:$M2_HOME/bin:$PATH:/usr/5bin:$HOME/scripts"
 
 set -o vi
 export TERM=xterm-256color
