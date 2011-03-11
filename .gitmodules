@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vim-togglecomments"]
 	path = .vim/bundle/vim-togglecomments
 	url = git://github.com/halcyon/vim-togglecomments.git
+[submodule ".vim/bundle/html5.vim"]
+	path = .vim/bundle/html5.vim
+	url = git://github.com/othree/html5.vim.git
