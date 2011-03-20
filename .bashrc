@@ -122,3 +122,5 @@ export PATH="$HOME/dotfiles:$M2_HOME/bin:$GROOVY_HOME/bin:$PATH:/usr/5bin:$HOME/
 
 set -o vi
 export TERM=xterm-256color
+export JAVA_OPTS="-Djavax.net.ssl.trustStore=$HOME/.m2/trust.jks -Djavax.net.ssl.trustStorePassword=changeit"
+export CURL_CA_BUNDLE="$HOME/.m2/at-bp-isav-01.crt"
