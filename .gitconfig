@@ -11,3 +11,5 @@
 	default = tracking
 [mergetool]
 	prompt = false
+[diff]
+	ignoreSubmodules = dirty

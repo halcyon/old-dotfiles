@@ -31,9 +31,8 @@ apt-add-repository ppa:pidgin-developers/ppa
 apt-add-repository ppa:halcyonblue/synergy
 apt-add-repository ppa:halcyonblue/ffmpeg
 apt-add-repository ppa:halcyonblue/calibre
-aptitude update
-#apt-add-list virtualbox 'deb http://download.virtualbox.org/virtualbox/debian maverick non-free'
-#wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+apt-add-list virtualbox 'deb http://download.virtualbox.org/virtualbox/debian maverick contrib'
+wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
 
 
 aptitude -y upgrade
