@@ -125,3 +125,9 @@ set -o vi
 export TERM=xterm-256color
 export JAVA_OPTS="-Djavax.net.ssl.trustStore=$HOME/.m2/trust.jks -Djavax.net.ssl.trustStorePassword=changeit"
 export CURL_CA_BUNDLE="$HOME/.m2/at-bp-isav-01.crt"
+
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"

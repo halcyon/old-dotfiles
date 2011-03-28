@@ -28,7 +28,7 @@ apt-add-repository ppa:pidgin-developers/ppa
 apt-add-repository ppa:halcyonblue/synergy
 apt-add-repository ppa:halcyonblue/ffmpeg
 apt-add-repository ppa:halcyonblue/calibre
-#apt-add-list virtualbox 'deb http://download.virtualbox.org/virtualbox/debian maverick non-free'
+#apt-add-list virtualbox 'deb http://download.virtualbox.org/virtualbox/debian maverick contrib'
 #wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
 
 
@@ -45,7 +45,7 @@ aptitude -y install mysql-server libmysqlclient-dev dput
 aptitude -y install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev
 
 add-cgroup
-aptitude -y install lxc libvirt-bin
+#aptitude -y install lxc libvirt-bin
 
 aptitude -y install synergy
 
