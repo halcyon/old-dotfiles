@@ -35,7 +35,7 @@ apt-add-repository ppa:halcyonblue/calibre
 apt-add-list virtualbox 'deb http://download.virtualbox.org/virtualbox/debian maverick contrib'
 wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
 
-
+aptitude update
 aptitude -y upgrade
 
 aptitude -y install git git-svn
