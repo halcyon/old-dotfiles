@@ -115,7 +115,8 @@ alias encode='time encode.sh'
 . ~/dotfiles/bash_completion.d/gitprompt/gitprompt.sh
 . ~/dotfiles/bash_completion.d/git-flow-completion/git-flow-completion.bash
 
-#export M2_HOME="$HOME/apache-maven-3.0"
+export M2_HOME="$HOME/apache-maven-3.0.3"
+#export M2_HOME="$HOME/apache-maven-2.2.1"
 export JAVA_HOME="/usr/lib/jvm/java-6-openjdk"
 export PATH="$HOME/dotfiles:$M2_HOME/bin:$PATH:/usr/5bin:$HOME/scripts"
 
