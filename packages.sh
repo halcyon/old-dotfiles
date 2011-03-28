@@ -27,6 +27,7 @@ aptitude install ppa-purge
 apt-add-repository ppa:chromium-daily/stable
 apt-add-repository ppa:sevenmachines/flash
 apt-add-repository ppa:git-core/ppa
+apt-add-repository ppa:mozillateam/firefox-stable
 apt-add-repository ppa:pidgin-developers/ppa
 apt-add-repository ppa:halcyonblue/synergy
 apt-add-repository ppa:halcyonblue/ffmpeg
@@ -51,5 +52,5 @@ aptitude -y install build-essential bison openssl libreadline6 libreadline6-dev 
 # aptitude -y install lxc libvirt-bin
 
 aptitude -y install synergy
-
+aptitude -y install virtualbox-4.0
 aptitude -y install gtk-recordMyDesktop
