@@ -39,7 +39,7 @@ aptitude update
 aptitude -y upgrade
 
 aptitude -y install git git-svn
-aptitude -y install chromium-browser flashplugin64-installer vim-gtk ctags ack-grep pidgin calibre
+aptitude -y install chromium-browser flashplugin64-installer vim-gtk ctags ack-grep pidgin calibre pdfedit
 ln -s /usr/bin/ack-grep /usr/bin/ack
 aptitude -y install openssh-server
 aptitude -y install mysql-server libmysqlclient-dev
