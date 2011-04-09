@@ -135,4 +135,4 @@ alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 
 export PAGER='less -X'
 
-export RAILS_ENV=production
+export RAILS_ENV="development"
