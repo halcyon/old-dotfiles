@@ -37,14 +37,14 @@ foreach file ($files)
         # Pass 1
         ffmpeg -i $file -pass 1 \
                   -acodec libfaac -ab 128k -ac 2 -ar 44100 \
-                  -vcodec mpeg4 -aspect 16:9 \
-                  -s hd720 -b 10000k \
+                  -vcodec mpeg4 -sameq -aspect 16:9 \
+                  -s hd1080 -b 10000k \
                   -copyts $passfile
         # Pass 2
         ffmpeg -i $passfile -pass 2 \
                   -acodec libfaac -ab 128k -ac 2 -ar 44100 \
-                  -vcodec mpeg4 -aspect 16:9 \
-                  -s hd720 -b 10000k \
+                  -vcodec mpeg4 -sameq -aspect 16:9 \
+                  -s hd1080 -b 10000k \
                   -copyts $outputfile 
         # Remove junk files
         rm $passfile ffmpeg2pass-0.log
