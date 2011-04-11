@@ -120,7 +120,7 @@ export M2_HOME="$HOME/apache-maven-3.0.3"
 #export M2_HOME="$HOME/apache-maven-2.2.1"
 export JAVA_HOME="/usr/lib/jvm/java-6-openjdk"
 export GROOVY_HOME="/home/smcleod/groovy-1.7.10"
-export PATH="$HOME/dotfiles:$M2_HOME/bin:$GROOVY_HOME/bin:$PATH:/usr/5bin:$HOME/scripts"
+export PATH="$HOME/dotfiles/bin:$M2_HOME/bin:$GROOVY_HOME/bin:$PATH:/usr/5bin:$HOME/scripts"
 
 set -o vi
 export TERM=xterm-256color
