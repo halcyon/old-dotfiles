@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/html5.vim"]
 	path = .vim/bundle/html5.vim
 	url = git://github.com/othree/html5.vim.git
+[submodule "git-wtf"]
+	path = git-wtf
+	url = git://gitorious.org/willgit/mainline.git
