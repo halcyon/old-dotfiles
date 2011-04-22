@@ -1,0 +1,8 @@
+indent: auto
+indent-spaces: 2
+wrap: 0
+markup: yes
+output-xml: yes
+input-xml: yes
+show-warnings: yes
+numeric-entities: no
