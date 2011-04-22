@@ -46,3 +46,6 @@
 [submodule "git-wtf"]
 	path = git-wtf
 	url = git://gitorious.org/willgit/mainline.git
+[submodule ".vim/bundle/vim-haml"]
+	path = .vim/bundle/vim-haml
+	url = git://github.com/tpope/vim-haml.git
