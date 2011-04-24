@@ -85,9 +85,9 @@ set mouse=a
 " Run sudo
 cmap w!! w !sudo tee % >/dev/null
 
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "match OverLength /\%81v.\+/
-match OverLength /\%78v.\+/
+"match OverLength /\%78v.\+/
 
 "Necessary for vim-textobj-rubyblock
 runtime macros/matchit.vim
