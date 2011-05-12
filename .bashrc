@@ -126,7 +126,7 @@ export PATH="$HOME/dotfiles/bin:$HOME/dotfiles/git-wtf/bin:$M2_HOME/bin:$GROOVY_
 set -o vi
 export TERM=xterm-256color
 export JAVA_OPTS="-Djavax.net.ssl.trustStore=$HOME/.m2/trust.jks -Djavax.net.ssl.trustStorePassword=changeit"
-export CURL_CA_BUNDLE="$HOME/.m2/at-bp-isav-01.crt"
+#export CURL_CA_BUNDLE="$HOME/.m2/at-bp-isav-01.crt"
 
 alias b="bundle"
 alias bi="b install --path vendor"
