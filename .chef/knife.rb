@@ -1,10 +1,10 @@
 log_level                :info
 node_name                'smcleod'
 log_location             STDOUT
-client_key               '~/.chef/client.pem'
+client_key               "#{ENV['HOME']}/.chef/client.pem"
 validation_client_name   'chef-validator'
-validation_key           '~/.chef/validation.pem'
-chef_server_url          'http://irulan.homeunix.net:4000'
+validation_key           "#{ENV['HOME']}/.chef/validation.pem"
+chef_server_url          'http://10.3.102.31:4000'
 cache_type               'BasicFile'
-cache_options( :path => '~/.chef/checksums' )
-cookbook_path            [ "~/chef-repo/cookbooks", "~/chef-repo/site-cookbooks" ]
+cache_options( :path => "#{ENV['HOME']}/.chef/checksums" )
+cookbook_path            [ "#{ENV['HOME']}/chef-repo/cookbooks", "#{ENV['HOME']}/chef-repo/site-cookbooks" ]
