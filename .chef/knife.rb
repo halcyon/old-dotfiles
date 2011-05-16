@@ -1,4 +1,5 @@
 log_level                :info
+node_name                'smcleod'
 log_location             STDOUT
 client_key               '~/.chef/client.pem'
 validation_client_name   'chef-validator'
