@@ -10,6 +10,14 @@ apt-add-list() {
   fi
 }
 
+gem-install() {
+  gem list | grep $1 > /dev/null 2>&1
+  if [ "$?" -eq 1 ]
+  then
+    gem install $1
+  fi
+}
+
 PPAS=(git-core/ppa sevenmachines/flash)
 
 RVM_DEBS=(build-essential bison openssl libreadline6 libreadline6-dev curl
@@ -24,6 +32,7 @@ SYSTEM_DEBS=(ppa-purge git-svn openssh-server synergy virtualbox-4.0)
 
 MISC_DEBS=(pidgin calibre pdfedit gtk-recordMyDesktop)
 
+GEMS=(vagrant veewee chef)
 
 dpkg-query -s aptitude > /dev/null 2>&1
 if [ "$?" -eq 1 ]
@@ -99,20 +108,7 @@ then
   rvm --create --default ree@system
 fi
 
-gem list | grep vagrant > /dev/null 2>&1
-if [ "$?" -eq 1 ]
-then
-  gem install vagrant
-fi
-
-gem list | grep veewee > /dev/null 2>&1
-if [ "$?" -eq 1 ]
-then
-  gem install veewee
-fi
-
-gem list | grep chef > /dev/null 2>&1
-if [ "$?" -eq 1 ]
-then
-  gem install chef
-fi
+for gem in ${GEMS[*]}
+do
+  gem-install $gem
+done
