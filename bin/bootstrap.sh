@@ -35,11 +35,13 @@ aptitude -y install gtk-recordMyDesktop
 
 bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
 . /etc/profile
-rvm install ree
+if [ `rvm list | grep ree` ]
+  echo "rvm install ree"
+fi
 echo "gem: --no-rdoc --no-ri" > /etc/gemrc
 rvm --create --default ree@system
 
-gem install vagrant chef
+#gem install vagrant chef
 
 
 #We no longer use LXC
