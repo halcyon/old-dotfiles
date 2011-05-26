@@ -9,7 +9,6 @@ apt-add-list() {
 }
 
 apt-get -y install aptitude
-aptitude -y install ppa-purge
 
 aptitude -y purge empathy vim-tiny
 
@@ -21,17 +20,13 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | s
 aptitude update
 aptitude -y upgrade
 
-aptitude -y install git git-svn
-aptitude -y install firefox chromium-browser flashplugin64-installer vim-gtk ctags ack-grep pidgin calibre pdfedit
+aptitude -y install ppa-purge git git-svn openssh-server firefox chromium-browser flashplugin64-installer vim-gtk ctags ack-grep pidgin calibre pdfedit
 ln -sf /usr/bin/ack-grep /usr/bin/ack
-aptitude -y install openssh-server
 
 #rvm notes REE dependencies
 aptitude -y install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev
 
-aptitude -y install synergy
-aptitude -y install virtualbox-4.0
-aptitude -y install gtk-recordMyDesktop
+aptitude -y install synergy virtualbox-4.0 gtk-recordMyDesktop
 
 bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
 echo "gem: --no-rdoc --no-ri" > /etc/gemrc
