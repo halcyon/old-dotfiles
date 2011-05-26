@@ -34,17 +34,33 @@ aptitude -y install virtualbox-4.0
 aptitude -y install gtk-recordMyDesktop
 
 bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+echo "gem: --no-rdoc --no-ri" > /etc/gemrc
 . /etc/profile
+
 rvm list | grep ree > /dev/null 2>&1
 if [ ! $? ]
 then
   rvm install ree
 fi
-echo "gem: --no-rdoc --no-ri" > /etc/gemrc
 rvm --create --default ree@system
 
-#gem install vagrant chef
+gem list | grep vagrant > /dev/null 2>&1
+if [ ! $? ]
+then
+  gem install vagrant
+fi
 
+gem list | grep veewee > /dev/null 2>&1
+if [ ! $? ]
+then
+  gem install veewee
+fi
+
+gem list | grep chef > /dev/null 2>&1
+if [ ! $? ]
+then
+  gem install chef
+fi
 
 #We no longer use LXC
 #add-cgroup() {
