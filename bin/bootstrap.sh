@@ -28,16 +28,21 @@ aptitude -y install build-essential bison openssl libreadline6 libreadline6-dev 
 
 aptitude -y install synergy virtualbox-4.0 gtk-recordMyDesktop
 
-bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
-echo "gem: --no-rdoc --no-ri" > /etc/gemrc
-. /etc/profile
+aptitude autoclean
+
+if [ ! -d "/usr/local/rvm" ]
+then
+  bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+  . /etc/profile
+fi
 
 rvm list | grep ree > /dev/null 2>&1
 if [ "$?" -eq 1 ]
 then
+  echo "gem: --no-rdoc --no-ri" > /etc/gemrc
   rvm install ree
+  rvm --create --default ree@system
 fi
-rvm --create --default ree@system
 
 gem list | grep vagrant > /dev/null 2>&1
 if [ "$?" -eq 1 ]
