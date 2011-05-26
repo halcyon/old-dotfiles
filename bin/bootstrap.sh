@@ -35,7 +35,9 @@ aptitude -y install gtk-recordMyDesktop
 
 bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
 . /etc/profile
-if [ `rvm list | grep ree` ]
+rvm list | grep ree > /dev/null 2>&1
+if [ $? ]
+then
   echo "rvm install ree"
 fi
 echo "gem: --no-rdoc --no-ri" > /etc/gemrc
