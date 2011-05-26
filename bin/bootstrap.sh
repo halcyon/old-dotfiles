@@ -45,7 +45,7 @@ gem-install() {
 PURGE_DEBS=(empathy vim-tiny)
 PPAS=(git-core/ppa sevenmachines/flash)
 
-SYSTEM_DEBS=(ppa-purge git-svn openssh-server synergy virtualbox-4.0)
+SYSTEM_DEBS=(ppa-purge git-svn openssh-server synergy virtualbox-4.0 screen)
 RVM_DEBS=(build-essential bison openssl libreadline6 libreadline6-dev curl
 git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev
 sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev)
