@@ -8,9 +8,29 @@ apt-add-list() {
   fi
 }
 
-apt-get -y install aptitude
+RVM_DEBS=(build-essential bison openssl libreadline6 libreadline6-dev curl
+git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev
+sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev)
 
-aptitude -y purge empathy vim-tiny
+WEB_DEBS=(firefox chromium-browser flashplugin64-installer)
+
+VIM_DEBS=(vim-gtk ctags ack-grep)
+
+SYSTEM_DEBS=(ppa-purge git-svn openssh-server synergy virtualbox-4.0)
+
+MISC_DEBS=(pidgin calibre pdfedit gtk-recordMyDesktop)
+
+dpkg-query -s aptitude > /dev/null 2>&1
+if [ "$?" -eq 1 ]
+then
+  apt-get -y install aptitude
+fi
+
+dpkg-query -s empathy vim-tiny > /dev/null 2>&1
+if [ "$?" -eq 1 ]
+then
+  aptitude -y purge empathy vim-tiny
+fi
 
 apt-add-repository ppa:git-core/ppa
 apt-add-repository ppa:sevenmachines/flash
@@ -20,17 +40,37 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | s
 aptitude update
 aptitude -y upgrade
 
-aptitude -y install ppa-purge git git-svn openssh-server firefox chromium-browser flashplugin64-installer vim-gtk ctags ack-grep pidgin calibre pdfedit
-ln -sf /usr/bin/ack-grep /usr/bin/ack
-
-#rvm notes REE dependencies
-dpkg-query -s build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev
+dpkg-query -s ${WEB_DEBS[*]} > /dev/null 2>&1
 if [ "$?" -eq 1 ]
 then
-  aptitude -y install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev
+  aptitude -y install ${WEB_DEBS[*]}
 fi
 
-aptitude -y install synergy virtualbox-4.0 gtk-recordMyDesktop
+dpkg-query -s ${VIM_DEBS[*]} > /dev/null 2>&1
+if [ "$?" -eq 1 ]
+then
+  aptitude -y install ${VIM_DEBS[*]}
+  ln -sf /usr/bin/ack-grep /usr/bin/ack
+fi
+
+dpkg-query -s ${SYSTEM_DEBS[*]} > /dev/null 2>&1
+if [ "$?" -eq 1 ]
+then
+  aptitude -y install ${SYSTEM_DEBS[*]}
+fi
+
+dpkg-query -s ${MISC_DEBS[*]} > /dev/null 2>&1
+if [ "$?" -eq 1 ]
+then
+  aptitude -y install ${SYSTEM_DEBS[*]}
+fi
+
+dpkg-query -s ${RVM_DEBS[*]} > /dev/null 2>&1
+if [ "$?" -eq 1 ]
+then
+  aptitude -y install ${RVM_DEBS[*]}
+fi
+
 
 aptitude autoclean
 
@@ -65,20 +105,3 @@ if [ "$?" -eq 1 ]
 then
   gem install chef
 fi
-
-#We no longer use LXC
-#add-cgroup() {
-#  grep cgroup /etc/fstab > /dev/null
-#  if [ $? -ne 0 ]
-#  then
-#    echo -e "none\t/cgroup\tcgroup\tdefaults\t0\t0" >> /etc/fstab
-#  fi
-#  mkdir -p /cgroup
-#  mount /cgroup
-#}
-
-# add-cgroup
-# aptitude -y install lxc libvirt-bin
-
-#Needed for publishing to a PPA
-#aptitude -y install dput
