@@ -8,8 +8,10 @@ apt-add-list() {
   fi
 }
 
+apt-get -y install aptitude
+aptitude -y install ppa-purge
+
 aptitude -y purge empathy vim-tiny
-aptitude install ppa-purge
 
 apt-add-repository ppa:git-core/ppa
 apt-add-repository ppa:sevenmachines/flash
@@ -20,16 +22,21 @@ aptitude update
 aptitude -y upgrade
 
 aptitude -y install git git-svn
-aptitude -y install chromium-browser flashplugin64-installer vim-gtk ctags ack-grep pidgin calibre pdfedit
+aptitude -y install firefox chromium-browser flashplugin64-installer vim-gtk ctags ack-grep pidgin calibre pdfedit
 ln -s /usr/bin/ack-grep /usr/bin/ack
 aptitude -y install openssh-server
 
-
+#rvm notes REE dependencies
 aptitude -y install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev
 
 aptitude -y install synergy
 aptitude -y install virtualbox-4.0
 aptitude -y install gtk-recordMyDesktop
+
+bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
+rvm reload
+rvm install ree
+rvm --create --default ree@system
 
 #We no longer use LXC
 #add-cgroup() {
@@ -47,7 +54,3 @@ aptitude -y install gtk-recordMyDesktop
 
 #Needed for publishing to a PPA
 #aptitude -y install dput
-
-#No longer needed in Natty
-#apt-get -y install aptitude
-#aptitude -y install python-software-properties ppa-purge
