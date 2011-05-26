@@ -24,7 +24,11 @@ aptitude -y install ppa-purge git git-svn openssh-server firefox chromium-browse
 ln -sf /usr/bin/ack-grep /usr/bin/ack
 
 #rvm notes REE dependencies
-aptitude -y install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev
+dpkg-query -s build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev
+if [ "$?" -eq 1 ]
+then
+  aptitude -y install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev
+fi
 
 aptitude -y install synergy virtualbox-4.0 gtk-recordMyDesktop
 
