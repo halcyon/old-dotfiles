@@ -23,7 +23,7 @@ aptitude -y upgrade
 
 aptitude -y install git git-svn
 aptitude -y install firefox chromium-browser flashplugin64-installer vim-gtk ctags ack-grep pidgin calibre pdfedit
-ln -s /usr/bin/ack-grep /usr/bin/ack
+ln -sf /usr/bin/ack-grep /usr/bin/ack
 aptitude -y install openssh-server
 
 #rvm notes REE dependencies
