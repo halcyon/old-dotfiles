@@ -38,26 +38,26 @@ echo "gem: --no-rdoc --no-ri" > /etc/gemrc
 . /etc/profile
 
 rvm list | grep ree > /dev/null 2>&1
-if [ ! $? ]
+if [ "$?" -eq 1 ]
 then
   rvm install ree
 fi
 rvm --create --default ree@system
 
 gem list | grep vagrant > /dev/null 2>&1
-if [ ! $? ]
+if [ "$?" -eq 1 ]
 then
   gem install vagrant
 fi
 
 gem list | grep veewee > /dev/null 2>&1
-if [ ! $? ]
+if [ "$?" -eq 1 ]
 then
   gem install veewee
 fi
 
 gem list | grep chef > /dev/null 2>&1
-if [ ! $? ]
+if [ "$?" -eq 1 ]
 then
   gem install chef
 fi
