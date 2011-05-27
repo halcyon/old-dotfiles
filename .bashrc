@@ -112,7 +112,8 @@ alias rdp='remote'
 alias encode='time encode.sh'
 alias tidyhtml='tidy -m $1 -config ~/dotfiles/tidyhtml.conf'
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && . "/usr/local/rvm/scripts/rvm" # Load RVM function
 
 . ~/dotfiles/bash_completion.d/gitprompt/gitprompt.sh
 . ~/dotfiles/bash_completion.d/git-flow-completion/git-flow-completion.bash

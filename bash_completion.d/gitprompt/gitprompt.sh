@@ -43,9 +43,10 @@ function prompt_func() {
     prompt="${TITLEBAR}${BLUE}[${LIGHT_CYAN}\u@\H ${RED}\w${GREEN}$(parse_git_branch)${BLUE}]${COLOR_NONE} "
     if test $previous_return_value -eq 0
     then
-        PS1="${prompt}➔ "
+        #PS1="${prompt}➔ "
+        PS1="${prompt}-> "
     else
-        PS1="${prompt}${RED}➔${COLOR_NONE} "
+        PS1="${prompt}${RED}->${COLOR_NONE} "
     fi
 }
 
