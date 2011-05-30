@@ -114,3 +114,12 @@ do
     echo ". $i" >> $HOME/.bashrc
   fi
 done
+
+for i in `find "$HOME/dotfiles" -maxdepth 1 -not -name '.git' -not -name '.gitmodules' -not -name '.gitignore' -name '.*'`
+do
+  dotfile="$HOME/`basename $i`"
+  if [ ! -h "$dotfile" ]
+  then
+    ln -s "$i" "$dotfile"
+  fi
+done
