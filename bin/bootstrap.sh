@@ -86,8 +86,8 @@ setup-ruby() {
   if [ ! -d "/usr/local/rvm" ]
   then
     bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)
-    . /etc/profile
   fi
+  . /etc/profile
 
   rvm list | grep ree > /dev/null 2>&1
   if [ "$?" -eq 1 ]
@@ -105,3 +105,12 @@ setup-ruby() {
 
 setup-debian-packages
 setup-ruby
+
+for i in `find "$HOME/dotfiles/bash_completion.d" -name '*.bash'`
+do
+  grep "$i" "$HOME/.bashrc" > /dev/null 2>&1
+  if [ "$?" -eq 1 ]
+  then
+    echo ". $i" >> $HOME/.bashrc
+  fi
+done
