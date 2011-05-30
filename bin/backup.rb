@@ -4,7 +4,7 @@ require "open-uri"
 
 time = Time.new
 backupDirectory = "/home/smcleod/githubbackup/#{time.year}.#{time.month}.#{time.day}"
-username = "halcyon"
+username = "bhoefener1"
 
 YAML.load(open("http://github.com/api/v2/yaml/repos/show/#{username}"))['repositories'].map{|repository|
 
