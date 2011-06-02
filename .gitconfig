@@ -13,3 +13,5 @@
 	prompt = false
 [diff]
 	ignoreSubmodules = dirty
+[github]
+	user = halcyon
