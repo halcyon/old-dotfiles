@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/vim-togglehloverlength"]
 	path = .vim/bundle/vim-togglehloverlength
 	url = git@github.com:halcyon/vim-togglehloverlength.git
+[submodule ".vim/bundle/gist-vim"]
+	path = .vim/bundle/gist-vim
+	url = git://github.com/mattn/gist-vim.git
