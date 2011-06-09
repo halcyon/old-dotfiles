@@ -120,6 +120,6 @@ do
   dotfile="$HOME/`basename $i`"
   if [ ! -h "$dotfile" ]
   then
-    ln -s "$i" "$dotfile"
+    ln -sf "$i" "$dotfile"
   fi
 done
