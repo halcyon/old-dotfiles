@@ -15,6 +15,6 @@
 	ignoreSubmodules = dirty
 [github]
 	user = halcyon
-[filter "revision"]
-	smudge = revision_smudge.rb
-	clean = revision_clean.rb
+[filter "rev"]
+	smudge = rev_smudge.rb
+	clean = rev_clean.rb
