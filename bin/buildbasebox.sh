@@ -7,17 +7,26 @@ version=$(head definitions/${basebox}/postinstall.sh 2>/dev/null | grep \$Rev: |
 if [ ! -z "${version}" ]
 then
   boxname="${basebox}-${date}-${version}"
-  vagrant basebox build "${basebox}"
-  vagrant basebox validate "${basebox}"
+  boxlist=`vagrant box list`
+  echo -e ${boxlist} | grep "${boxname}" > /dev/null 2>&1
   if [ $? -eq 0 ]
   then
-    if [ ! -f "${boxname}.box" ]
+    echo "BaseBox ${boxname} already exists!"
+    exit 1
+  else
+    vagrant basebox build "${basebox}"
+    vagrant basebox validate "${basebox}"
+    if [ $? -eq 0 ]
     then
-      echo "Packaging ${boxname}"
-      vagrant package --base "${basebox}" --output "${boxname}.box"
+      exit "Error: BaseBox Validation of ${basebox} failed"
     fi
-    vagrant box add "${boxname}" "${boxname}.box"
   fi
+  if [ ! -f "${boxname}.box" ]
+  then
+    echo "Packaging ${boxname}"
+    vagrant package --base "${basebox}" --output "${boxname}.box"
+  fi
+  vagrant box add "${boxname}" "${boxname}.box"
 else
   echo "Basebox not found"
   exit 1
