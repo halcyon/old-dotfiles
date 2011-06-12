@@ -16,15 +16,17 @@ then
   else
     vagrant basebox build "${basebox}"
     vagrant basebox validate "${basebox}"
-    if [ $? -eq 0 ]
+    if [ $? -ne 0 ]
     then
-      exit "Error: BaseBox Validation of ${basebox} failed"
+      echo "Error: BaseBox Validation of ${basebox} failed"
+      exit 1
     fi
   fi
   if [ ! -f "${boxname}.box" ]
   then
     echo "Packaging ${boxname}"
-    vagrant package --base "${basebox}" --output "${boxname}.box"
+    vagrant basebox export "${basebox}"
+    mv "${basebox}.box" "${boxname}.box"
   fi
   vagrant box add "${boxname}" "${boxname}.box"
 else

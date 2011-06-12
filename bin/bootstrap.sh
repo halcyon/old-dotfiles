@@ -53,7 +53,7 @@ VIM_DEBS=(vim-gtk exuberant-ctags ack-grep)
 WEB_DEBS=(firefox chromium-browser flashplugin64-installer)
 MISC_DEBS=(pidgin calibre pdfedit gtk-recordMyDesktop)
 
-GEMS=(vagrant veewee chef)
+GEMS=(bundle vagrant veewee chef)
 
 setup-debian-packages() {
   for ppa in ${PPAS[*]}
