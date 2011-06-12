@@ -31,3 +31,11 @@ alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 export PAGER='less -X'
 
 export RAILS_ENV="development"
+
+#Temporary work around until unity compatibility is added to vim
+#https://bugs.launchpad.net/ubuntu/+source/vim/+bug/776499
+unity_vim(){
+  (gvim -f $@ &)
+}
+alias vim='unity_vim'
+alias vi='unity_vim'
