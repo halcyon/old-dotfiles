@@ -2,7 +2,7 @@
 
 basebox=$1
 date=$(date +%m-%d-%Y)
-version=$(head definitions/${basebox}/postinstall.sh | grep \$Rev: | ruby -ne 'puts $_.scan(/\$Rev: (\S{6}) \$/)[0].to_s')
+version=$(head definitions/${basebox}/postinstall.sh 2>/dev/null | grep \$Rev: | ruby -ne 'puts $_.scan(/\$Rev: (\S{6}) \$/)[0].to_s')
 
 if [ ! -z "${version}" ]
 then
