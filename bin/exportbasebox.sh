@@ -7,12 +7,17 @@ version=$(head definitions/${basebox}/postinstall.sh | grep \$Rev: | ruby -ne 'p
 if [ ! -z "${version}" ]
 then
   boxname="${basebox}-${date}-${version}"
-  if [ ! -f "${boxname}.box" ]
+  vagrant basebox build "${basebox}"
+  vagrant basebox validate "${basebox}"
+  if [ $? -eq 0 ]
   then
-    echo "Packaging ${boxname}"
-    vagrant package --base "${basebox}" --output "${boxname}.box"
+    if [ ! -f "${boxname}.box" ]
+    then
+      echo "Packaging ${boxname}"
+      vagrant package --base "${basebox}" --output "${boxname}.box"
+    fi
+    vagrant box add "${boxname}" "${boxname}.box"
   fi
-  vagrant box add "${boxname}" "${boxname}.box"
 else
   echo "Basebox not found"
   exit 1
