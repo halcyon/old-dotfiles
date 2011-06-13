@@ -45,7 +45,7 @@ gem-install() {
 PURGE_DEBS=(empathy vim-tiny)
 PPAS=(git-core/ppa sevenmachines/flash)
 
-SYSTEM_DEBS=(ppa-purge git-svn openssh-server synergy virtualbox-4.0 screen connect-proxy)
+SYSTEM_DEBS=(ppa-purge git-svn openssh-server synergy virtualbox-4.0 nautilus-dropbox screen connect-proxy)
 RVM_DEBS=(build-essential bison openssl libreadline6 libreadline6-dev curl
 git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev
 sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev)
@@ -66,6 +66,9 @@ setup-debian-packages() {
   done
   apt-add-list virtualbox 'deb http://download.virtualbox.org/virtualbox/debian natty contrib'
   wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add - > /dev/null 2>&1
+
+  apt-add-list dropbox 'deb http://linux.dropbox.com/ubuntu natty main'
+  apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
 
   apt-install aptitude
   apt-purge ${PURGE_DEBS[*]}
