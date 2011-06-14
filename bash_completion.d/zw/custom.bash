@@ -22,6 +22,9 @@ export TERM=xterm-256color
 export JAVA_OPTS="-Djavax.net.ssl.trustStore=$HOME/.m2/trust.jks -Djavax.net.ssl.trustStorePassword=changeit"
 #export CURL_CA_BUNDLE="$HOME/.m2/at-bp-isav-01.crt"
 
+#Set for opscode chef's knife
+export EDITOR="vim -f"
+
 alias b="bundle"
 alias bi="b install --path vendor"
 alias bu="b update"
