@@ -1,5 +1,5 @@
 log_level                :info
-node_name                'smcleod'
+node_name                "#{ENV['USER']}"
 log_location             STDOUT
 client_key               "#{ENV['HOME']}/.chef/client.pem"
 validation_client_name   'chef-validator'
