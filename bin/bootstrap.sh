@@ -57,6 +57,15 @@ GEMS=(bundle vagrant veewee chef)
 
 setup-debian-packages() {
 
+  export DEBIAN_FRONTEND="noninteractive"
+
+  if ! (ping -c 1 dropbox.com | grep opendns > /dev/null 2>&1 )
+  then
+    DROPBOX=0
+  else
+    DROPBOX=1
+  fi
+
   sed -i -e 's|# deb http://archive.canonical.com/ubuntu natty partner|deb http://archive.canonical.com/ubuntu natty partner|' /etc/apt/sources.list
   for ppa in ${PPAS[*]}
   do
@@ -68,8 +77,11 @@ setup-debian-packages() {
   done
   apt-add-list virtualbox 'deb http://download.virtualbox.org/virtualbox/debian natty contrib'
   wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add - > /dev/null 2>&1
-  apt-add-list dropbox 'deb http://linux.dropbox.com/ubuntu natty main'
-  apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+  if [ ${DROPBOX} -eq 0 ]
+  then
+    apt-add-list dropbox 'deb http://linux.dropbox.com/ubuntu natty main'
+    apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
+  fi
 
   apt-install aptitude
   apt-purge ${PURGE_DEBS[*]}
