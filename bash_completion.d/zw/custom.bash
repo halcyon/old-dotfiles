@@ -38,7 +38,12 @@ export RAILS_ENV="development"
 #Temporary work around until unity compatibility is added to vim
 #https://bugs.launchpad.net/ubuntu/+source/vim/+bug/776499
 unity_vim(){
-  (gvim -f $@ &)
+  if [ -z "$DISPLAY" ]
+  then
+    vim -f "$@"
+  else
+    (gvim -f $@ &)
+  fi
 }
 alias vim='unity_vim'
 alias vi='unity_vim'
