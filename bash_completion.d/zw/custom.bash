@@ -42,7 +42,7 @@ unity_vim(){
   then
     vim -f "$@"
   else
-    (gvim -f $@ &)
+    (gvim -f "$@" &)
   fi
 }
 alias vim='unity_vim'
