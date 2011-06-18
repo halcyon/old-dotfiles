@@ -64,7 +64,7 @@ VIM_DEBS=(vim-gtk exuberant-ctags ack-grep)
 WEB_DEBS=(firefox chromium-browser flashplugin64-installer)
 MISC_DEBS=(calibre pdfedit gtk-recordMyDesktop nautilus-dropbox acroread vlc)
 
-GEMS=(bundle vagrant veewee chef rvm)
+GEMS=(bundle vagrant veewee chef rvm yard)
 
 setup-debian-packages() {
 
