@@ -83,6 +83,10 @@ setup-debian-packages() {
     apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
   fi
 
+  wget http://www.teamviewer.com/download/teamviewer_linux_x64.deb
+  dpkg -i teamviewer_linux_x64.deb
+  rm -f teamviewer_linux_x64.deb
+
   apt-install aptitude
   apt-purge ${PURGE_DEBS[*]}
   aptitude update
