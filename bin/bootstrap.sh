@@ -34,6 +34,17 @@ aptitude-install() {
   fi
 }
 
+dpkg-install() {
+  dpkg-query -s $1 > /dev/null 2>&1
+  if [ "$?" -eq 1 ]
+  then
+    wget $2
+    debfile=`basename $2`
+    dpkg -i install $debfile
+    rm -f $debfile
+  fi
+}
+
 gem-install() {
   gem list | grep $1 > /dev/null 2>&1
   if [ "$?" -eq 1 ]
@@ -83,9 +94,7 @@ setup-debian-packages() {
     apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
   fi
 
-  wget http://www.teamviewer.com/download/teamviewer_linux_x64.deb
-  dpkg -i teamviewer_linux_x64.deb
-  rm -f teamviewer_linux_x64.deb
+  dpkg-install teamviewer6 http://www.teamviewer.com/download/teamviewer_linux_x64.deb
 
   apt-install aptitude
   apt-purge ${PURGE_DEBS[*]}
