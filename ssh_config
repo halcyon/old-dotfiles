@@ -1,0 +1,7 @@
+Host mobile
+  User root
+  HostName localhost
+  Port 3333
+
+Host github.com
+  ProxyCommand proxy-command mobile 8080 %h %p
