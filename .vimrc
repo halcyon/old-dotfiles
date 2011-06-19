@@ -146,6 +146,9 @@ if has('autocmd')
   autocmd BufEnter *.patch setlocal noexpandtab
 endif
 
+" o Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
+" More details at :help fo-table
+au FileType * setlocal formatoptions-=o
 
 "autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
 "autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
