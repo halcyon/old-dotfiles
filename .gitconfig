@@ -13,8 +13,6 @@
 	prompt = false
 [diff]
 	ignoreSubmodules = dirty
-[github]
-	user = halcyon
 [filter "rev"]
 	smudge = rev_smudge.rb
 	clean = rev_clean.rb
