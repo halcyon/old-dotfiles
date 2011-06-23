@@ -1,6 +1,6 @@
 [user]
 	name = Scott McLeod
-	email = halcyonblue@gmail.com
+	email = smcleod@zeddworks.com
 [core]
 	editor = vim -f
 	autocrlf = input
