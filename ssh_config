@@ -4,4 +4,5 @@ Host mobile
   Port 3333
 
 Host github.com
-  ProxyCommand proxy-command mobile 8080 %h %p
+  IdentityFile ~/.ssh/zeddworks
+#  ProxyCommand proxy-command mobile 8080 %h %p
