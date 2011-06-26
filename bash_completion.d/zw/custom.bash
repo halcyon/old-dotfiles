@@ -48,6 +48,14 @@ unity_vim(){
 alias vim='unity_vim'
 alias vi='unity_vim'
 
-db_edit(){
+edb_edit(){
   knife data bag edit $1 $2 --secret-file /usr/local/rvm/gems/ree-1.8.7-2011.03@system/gems/vagrant-0.7.5/keys/vagrant
+}
+
+edb_upload(){
+  knife data bag from file $1 $2 --secret-file /usr/local/rvm/gems/ree-1.8.7-2011.03@system/gems/vagrant-0.7.5/keys/vagrant
+}
+
+edb_download(){
+  knife data bag show $1 $2 -f json > $2.json
 }
