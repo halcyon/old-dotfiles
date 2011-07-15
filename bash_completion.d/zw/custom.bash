@@ -48,12 +48,14 @@ unity_vim(){
 alias vim='unity_vim'
 alias vi='unity_vim'
 
+vagrant_dir=`dirname \`dirname \\\`gem which vagrant\\\`\``
+
 edb_edit(){
-  knife data bag edit $1 $2 --secret-file /usr/local/rvm/gems/ree-1.8.7-2011.03@system/gems/vagrant-0.7.5/keys/vagrant
+  knife data bag edit $1 $2 --secret-file $vagrant_dir/keys/vagrant
 }
 
 edb_initial_upload(){
-  knife data bag from file $1 $2 --secret-file /usr/local/rvm/gems/ree-1.8.7-2011.03@system/gems/vagrant-0.7.5/keys/vagrant
+  knife data bag from file $1 $2 --secret-file $vagrant_dir/keys/vagrant
 }
 
 db_upload(){
