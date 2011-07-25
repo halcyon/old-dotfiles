@@ -56,7 +56,7 @@ gem-install() {
 PURGE_DEBS=(vim-tiny)
 PPAS=(git-core/ppa sevenmachines/flash)
 
-SYSTEM_DEBS=(ppa-purge git-svn openssh-server synergy virtualbox-4.0 screen connect-proxy)
+SYSTEM_DEBS=(ppa-purge git-svn openssh-server synergy virtualbox-4.1 screen connect-proxy)
 RVM_DEBS=(build-essential bison openssl libreadline6 libreadline6-dev curl
 git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev
 sqlite3 libxml2-dev libxslt1-dev autoconf libc6-dev libncurses5-dev)
@@ -64,7 +64,7 @@ VIM_DEBS=(vim-gtk exuberant-ctags ack-grep)
 WEB_DEBS=(firefox chromium-browser flashplugin64-installer)
 MISC_DEBS=(calibre pdfedit gtk-recordMyDesktop nautilus-dropbox acroread vlc)
 
-GEMS=(bundle vagrant veewee chef rvm yard)
+GEMS=(bundler vagrant veewee chef rvm yard)
 
 setup-debian-packages() {
 
@@ -94,7 +94,7 @@ setup-debian-packages() {
     apt-key adv --keyserver pgp.mit.edu --recv-keys 5044912E
   fi
 
-  dpkg-install teamviewer6 http://www.teamviewer.com/download/teamviewer_linux_x64.deb
+#  dpkg-install teamviewer6 http://www.teamviewer.com/download/teamviewer_linux_x64.deb
 
   apt-install aptitude
   apt-purge ${PURGE_DEBS[*]}
